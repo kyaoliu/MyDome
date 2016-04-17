@@ -55,6 +55,27 @@
     <Compile Include="EFCodeFirst\Order.cs" />
     <Compile Include="EFCodeFirst\User.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelFirst\ModelFirstContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFirstContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\ModelFirstContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFirstContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\ModelFirstContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelFirstContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\Order.cs">
+      <DependentUpon>ModelFirstContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\User.cs">
+      <DependentUpon>ModelFirstContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student\AbstractFactory.cs" />
     <Compile Include="Student\FactoryMethod.cs" />
@@ -65,7 +86,27 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <EntityDeploy Include="ModelFirst\ModelFirstContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelFirstContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelFirst\ModelFirstContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelFirstContext.Context.cs</LastGenOutput>
+      <DependentUpon>ModelFirstContext.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModelFirst\ModelFirstContext.edmx.sql" />
+    <Content Include="ModelFirst\ModelFirstContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelFirstContext.cs</LastGenOutput>
+      <DependentUpon>ModelFirstContext.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
