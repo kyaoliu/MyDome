@@ -11,7 +11,8 @@ namespace Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return Content("dd123");
+        
+            return Content(Repository.AutoFac.DIContainer.Resolve<Repository.AutoFac.ITest>().TestField);
         }
     }
 }
