@@ -24,7 +24,7 @@ namespace Web
         {
             var builder = new ContainerBuilder();
 
-
+            builder.RegisterType<Repository.Cached.Memcached.Memcache>().As<Repository.Cached.ICache>();
 
             //builder.RegisterType<Repository.AutoFac.Testa>().As<Repository.AutoFac.ITest>();
             builder.Register((u, i) =>
