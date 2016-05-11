@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("testpagetoken", "home", FormMethod.Post))
+{
+    @Html.GenerateVerficationToken()
+    <input type="submit" value="提交" />
+}

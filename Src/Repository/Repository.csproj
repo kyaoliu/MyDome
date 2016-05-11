@@ -60,6 +60,14 @@
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +85,12 @@
     <Compile Include="EFCodeFirst\CodeFirstContext.cs" />
     <Compile Include="EFCodeFirst\Order.cs" />
     <Compile Include="EFCodeFirst\User.cs" />
+    <Compile Include="Filter\Class1.cs" />
+    <Compile Include="HtmlHelper.cs" />
+    <Compile Include="Filter\PageTokenView\IPageTokenView.cs" />
+    <Compile Include="Filter\PageTokenView\PageTokenViewBase.cs" />
+    <Compile Include="Filter\PageTokenView\SessionPageTokenView.cs" />
+    <Compile Include="Filter\PageTokenView\ValidateReHttpPostTokenAttribute.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelFirst\ModelFirstContext.Context.cs">
       <AutoGen>True</AutoGen>
@@ -104,6 +118,7 @@
     <Compile Include="Student\FactoryMethod.cs" />
     <Compile Include="Student\QuickSort.cs" />
     <Compile Include="Student\SimpleFactory.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
